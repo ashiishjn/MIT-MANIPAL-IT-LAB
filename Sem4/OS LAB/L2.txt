@@ -1,0 +1,27 @@
+Question 2
+******File name fruits.txt******
+b)
+grep -E ^[A-Z] fruits.txt
+d)
+grep -E " " fruits.txt
+e) 
+touch fruits_number
+grep -E "[0-9]" fruits.txt >> fruits_number
+
+
+Question 3
+******File name studentinformation.txt******
+i)
+grep -E "ICI" studentinformation.txt |wc -l
+
+ii)
+touch ITstudents
+sed 's/IT/Information Technology/g' studentinformation.txt >> ITstudents
+
+Question 4
+******File name studentMIT.txt******
+find . -type f -name "*MIT*"
+sed 's/MIT/Manipal Institute of Technology/g' studentMIT.txt
+
+Question 5
+find . -type f -name "*[0-9]*" -exec wc {} \;

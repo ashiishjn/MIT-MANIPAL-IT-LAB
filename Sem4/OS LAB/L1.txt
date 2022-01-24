@@ -1,0 +1,8 @@
+a)
+find . -type f -name "*.txt"
+b)
+find . -type f -name "*[0-9]*"
+c)
+find . -type f -name "*????*"
+d)
+find . -type f -name "[!aeiou]*"
