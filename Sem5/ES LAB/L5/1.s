@@ -1,0 +1,43 @@
+	AREA RESET,DATA,READONLY
+	EXPORT __Vectors
+
+__Vectors
+
+	DCD 0X10001000
+	DCD Reset_Handler
+
+	AREA mycode,CODE,READONLY
+	ENTRY
+	EXPORT Reset_Handler
+	
+Reset_Handler
+	LDR R0, =0X10000000
+	MOV R3,#9
+	
+LOOP
+	ADD R5,R0,#4
+	LDR R1,[R0]
+	MOV R6,R3
+	MOV R4,R0
+	MOV R7,R1
+LOOP2
+	LDR R2,[R5]
+	CMP R1,R2
+	BLO SKIP
+	MOV R1,R2
+	MOV R4,R5
+SKIP
+	ADD R5,#4
+	SUBS R6,#1
+	BNE LOOP2
+	STR R1,[R0]
+	STR R7,[R4]
+	ADD R0,#4
+	SUBS R3,#1
+	BNE LOOP
+	
+	NOP 
+	END
+	
+	
+	
