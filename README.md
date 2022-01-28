@@ -4,6 +4,9 @@ Please practice with caution while looking through these answers as portions of 
 
 Always double check the output.
 
+##  1st Semester :
+
+Problem Solving Using Computer Lab (PSUC) : Programs with basic concept of Data Structure in 'C'.
 
 ##  3rd Semester :
 
