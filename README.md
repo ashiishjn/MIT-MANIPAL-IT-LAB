@@ -24,6 +24,8 @@ Design and Analysis of Algorithms Lab (DAA) : Design and Analysis of some Algori
 
 Operating Systems Lab (OS) : Shell commands were done using Git Bash 
 
+Microprocessor Systems Lab (COMP): Assembly Language program using MASM and DOSBox.
+
 ##  5th Semester :
 
 Embedded Systems Lab (ES) : These programs are executed using Keil microVision4, NXP, LPC1768 in ARM Assembly Language and Embedded 'C'.
