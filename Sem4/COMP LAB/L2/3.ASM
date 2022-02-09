@@ -1,0 +1,93 @@
+Data Segment
+Array1 dB 45H, 0B1H, 79H, 10H, 9AH ,43H, 22H, 0AH, 11H, 99H
+Array2 dB 11H, 22H, 33H, 44H, 55H ,66H, 77H, 88H, 99H, 0AAH
+Data ends
+
+Code Segment
+Assume CS:Code, DS:Data
+Start:
+MOV AX, Data
+MOV DS, AX
+
+LEA SI, Array1
+LEA DI, Array2
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+INC SI
+INC DI
+
+
+MOV AL, [SI]
+MOV BL, [DI]
+MOV [DI], AL
+MOV [SI], BL
+
+Code ends
+end Start

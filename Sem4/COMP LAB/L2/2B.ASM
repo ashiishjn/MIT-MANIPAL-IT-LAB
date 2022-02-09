@@ -1,0 +1,26 @@
+DATA SEGMENT
+        A DW 1A10H, 2B20H,3C30H,4D40H,5E50H
+        B DW 5 DUP(?)
+DATA ENDS
+
+CODE SEGMENT
+        ASSUME CS:CODE DS:DATA
+
+START:MOV SI,OFFSET A
+      LEA DI,B
+      MOV CX,05
+
+BACK:MOV AX,[SI]
+     MOV [DI],AX
+     INC SI
+     INC SI
+     INC DI
+     INC DI
+     LOOP BACK
+
+     MOV AH,4CH
+     INT 21H
+
+     CODE ENDS
+     END START
+

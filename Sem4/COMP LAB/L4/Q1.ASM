@@ -1,0 +1,28 @@
+DATA SEGMENT
+        NUM1 DW 2345H
+        NUM2 DW 2422H
+        RES DW 2 DUP (?)
+        DATA ENDS
+CODE SEGMENT
+        ASSUME CS:CODE, DS:DATA
+
+START:MOV AX,DATA
+      MOV DS,AX
+
+      MOV AX,0
+      MOV DX,0
+      MOV CX,NUM2
+
+BACK: ADD AX,NUM1
+      ADC DX,0
+      LOOP BACK
+
+      LEA SI,RES
+      MOV [SI],AX
+      MOV 2[SI],DX
+
+      MOV AH,4CH
+      INT 21H
+
+      CODE ENDS
+      END START

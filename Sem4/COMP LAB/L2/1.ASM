@@ -1,0 +1,66 @@
+Data Segment
+Array1 dB 45H, 0B1H, 79H, 10H, 9AH ,43H, 22H, 0AH, 11H, 99H
+Array2 dB 5 dup (?)
+Data ends
+
+Code Segment
+Assume CS:Code, DS:Data
+Start:
+MOV AX, Data
+MOV DS, AX
+
+LEA SI, Array1
+ADD SI, 9
+LEA DI, Array2
+ADD DI, 4
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+DEC SI
+DEC DI
+
+MOV AL, [SI]
+MOV [DI], AL
+
+Code ends
+end Start
