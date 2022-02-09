@@ -1,0 +1,90 @@
+2) 
+create trigger driver_info
+after insert on participated 
+for each row
+Declare 
+	did person.driver_id%type;
+	n person.name%type;
+	adr person.address%type;
+Begin
+	did := :new.driver_id;
+	select name into n, address into adr from person where driver_id = did;
+	DBMS_OUTPUT.PUT_LINE('Name:' || n ||'Driver ID:' || did || 'Address' || adr);
+End;
+
+3)
+create or replace function accd_fn(yr in varchar2)
+return number
+is
+	no_of_accd number;
+begin
+   
+	select count(report_number) into no_of_accd
+	from accident
+	where extract(year from accd_date)=yr;
+	return no_of_accd;
+end;
+select accd_fn('1997') from Dual;
+
+4)
+set serveroutput on
+create or replace procedure damage(did_in in varchar2,year_in in varchar2)
+as tot_dmg_amt integer;
+begin
+  select sum(damage_amount) into tot_dmg_amt
+  from participated
+  where report_number in (select report_number
+  from accident
+  where extract(year from accd_date)=year_in)
+  and driver_id=did_in;
+ DBMS_OUTPUT.PUT_LINE(tot_dmg_amt);
+end;
+execute damage('1','1997');
+
+5)
+set serveroutput on
+create or replace procedure location_info(location_in in varchar2)
+is
+begin    
+    for i in (select name,participated.driver_id as D,report_number,accd_date
+    from accident natural join participated,person
+    where person.driver_id=participated.driver_id and location = location_in)
+    loop
+        dbms_output.put_line(i.name || ' ' || i.D || ' ' || i.report_number || ' ' || i.accd_date);
+    end loop;
+end;
+execute location_info('Manipal');
+
+6)
+create or replace procedure ins is
+cursor c is 
+select * from customer where cust_id in (select cust_id from orders group by cust_id having sum(order_amt) > 10000);
+temp c%rowtype;
+begin
+open c;
+loop
+fetch c into temp;
+exit when c%notfound;
+insert into T1 values(temp.cust_id, temp.name, temp.city);
+end loop;
+close c;
+end;
+
+7)
+create or replace procedure acc_info is
+cursor c1 is
+select * from accident;
+temp c1%rowtype;
+begin
+open c1;
+loop
+fetch c1 into temp;
+exit when c1%notfound;
+if temp.location = 'Manipal' then
+	insert into loc_manipal values(temp.report_number, temp.accd_date);
+elsif temp.location = 'Uduipi' then
+	insert into loc_uduipi values(temp.report_number, temp.accd_date);
+end if;
+end loop;
+close c1;
+end;

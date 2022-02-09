@@ -1,0 +1,12 @@
+1) select course from book_adoption group by course having book_isbn > 1;
+2) select distinct(dept) from course1 natural join book_adoption where book_isbn in (select book_isbn from text where publisher = 'pearson');
+3) select distinct(regno) from course1 natural join enroll group by regno having count(distinct dept)>1; 
+4) select regno from student where regno not in (select distinct regno from enroll);
+5) select book_isn from course natural join enroll;
+6) select course from text natural join book_adoption  where publisher = 'perason' group by course having count(book_isbn)>1;
+7) select regno from enroll natural join book_adoption group by enroll.regno having count(book_isbn) >= all (select count(book_isbn) from enroll natural join book_adoption group by enroll.regno);
+8) select publisher, count(book_isbn) Count from text group by publisher;
+9) select distinct regno from enroll where regno not in (select regno from enroll where course not in (select course from book_adoption));
+10) create view Reg_book (regno, course, book_isbn) as select regno, course, book_isbn from enroll natural left outer join book_adoption;
+    create view registeration_no (regno) as select distinct regno from enroll;
+    select regno from registeration_no where regno not in (select distinct regno from reg_book where book_isbn = NULL);

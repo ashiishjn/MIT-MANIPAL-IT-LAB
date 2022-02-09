@@ -1,0 +1,10 @@
+F:\DBMS LAB\LAB 1\Q2\Q2\bin\Debug\Q2.exe.config
+F:\DBMS LAB\LAB 1\Q2\Q2\bin\Debug\Q2.exe
+F:\DBMS LAB\LAB 1\Q2\Q2\bin\Debug\Q2.pdb
+F:\DBMS LAB\LAB 1\Q2\Q2\obj\Debug\Q2.csproj.AssemblyReference.cache
+F:\DBMS LAB\LAB 1\Q2\Q2\obj\Debug\Q2.Form1.resources
+F:\DBMS LAB\LAB 1\Q2\Q2\obj\Debug\Q2.Properties.Resources.resources
+F:\DBMS LAB\LAB 1\Q2\Q2\obj\Debug\Q2.csproj.GenerateResource.cache
+F:\DBMS LAB\LAB 1\Q2\Q2\obj\Debug\Q2.csproj.CoreCompileInputs.cache
+F:\DBMS LAB\LAB 1\Q2\Q2\obj\Debug\Q2.exe
+F:\DBMS LAB\LAB 1\Q2\Q2\obj\Debug\Q2.pdb
