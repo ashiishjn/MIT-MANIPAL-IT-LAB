@@ -8,29 +8,29 @@ While taking any of the codes please do acknowledge it.
 
 ##  1st Semester :
 
-### Problem Solving Using Computer Lab (PSUC) : Programs with basic concept of Data Structure in 'C'.
+#### Problem Solving Using Computer Lab (PSUC) : Programs with basic concept of Data Structure in 'C'.
 
 ##  3rd Semester :
 
-### Data Structures Lab (DS) : Programs with basic concepts of Data Structures in 'C++'.
+#### Data Structures Lab (DS) : Programs with basic concepts of Data Structures in 'C++'.
 
-### Object Oriented Programming Lab (OOP) : Programs in Java utilizing Object Oriented Programming concepts.
+#### Object Oriented Programming Lab (OOP) : Programs in Java utilizing Object Oriented Programming concepts.
 
 ##  4th Semester :
 
-### Design and Analysis of Algorithms Lab (DAA) : Design and Analysis of some Algorithms in 'C++' Language.
+#### Design and Analysis of Algorithms Lab (DAA) : Design and Analysis of some Algorithms in 'C++' Language.
 
-### Operating Systems Lab (OS) : Shell commands were done using Git Bash 
+#### Operating Systems Lab (OS) : Shell commands were done using Git Bash 
 
-### Microprocessor Systems Lab (COMP): Assembly Language program using MASM and DOSBox.
+#### Microprocessor Systems Lab (COMP): Assembly Language program using MASM and DOSBox.
 
 ##  5th Semester :
 
-### Embedded Systems Lab (ES) : These programs are executed using Keil microVision4, NXP, LPC1768 in ARM Assembly Language and Embedded 'C'.
+#### Embedded Systems Lab (ES) : These programs are executed using Keil microVision4, NXP, LPC1768 in ARM Assembly Language and Embedded 'C'.
 
-### DataBase System (DBS) : The programs for first two labs were executed using visual studio and thereafter the queries on oracle.
+#### DataBase System (DBS) : The programs for first two labs were executed using visual studio and thereafter are the queries done on oracle.
 
-### Network Programming and Simulation (NPS) : The socket programming were executed on linux and the packet tracer were done using cisco packet tracer.
+#### Network Programming and Simulation (NPS) : The socket programming were executed on linux and the packet tracer were done using cisco packet tracer.
  
 ## Clone the repo
 ```sh
