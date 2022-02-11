@@ -29,3 +29,8 @@ Microprocessor Systems Lab (COMP): Assembly Language program using MASM and DOSB
 ##  5th Semester :
 
 Embedded Systems Lab (ES) : These programs are executed using Keil microVision4, NXP, LPC1768 in ARM Assembly Language and Embedded 'C'.
+
+DataBase System (DBS) : The programs for first two labs were executed using visual studio and thereafter the queries on oracle.
+
+Network Programming and Simulation (NPS) : The socket programming were executed on linux and the packet tracer were done using cisco packet tracer.
+ 
