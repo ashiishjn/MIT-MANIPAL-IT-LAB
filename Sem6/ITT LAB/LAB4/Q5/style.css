@@ -1,0 +1,17 @@
+body {
+  margin: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 300px;
+}
+
+.calci {
+  grid-column: 1 / -1;
+}
+
+#output {
+  grid-column: 1 / 5;
+  height: 30px;
+  border: 0.1px solid grey;
+  border-radius: 2px;
+}
