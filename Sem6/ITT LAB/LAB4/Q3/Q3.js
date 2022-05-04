@@ -8,9 +8,8 @@ function resetPosition(element) {
   element.style.zIndex = oldValue;
 }
 
-var boxes = document.getElementsByClassName("box");
-Array.from(boxes).forEach((element, index) => {
-  // Configure onmouseover and onmouseout event
-  element.onmouseover = () => bringToTop(element);
-  element.onmouseout = () => resetPosition(element);
-});
+// var boxes = document.getElementsByClassName("box");
+// Array.from(boxes).forEach((element, index) => {
+//   element.onmouseover = () => bringToTop(element);
+//   element.onmouseout = () => resetPosition(element);
+// });
